@@ -36,7 +36,7 @@ public:
     };
 
     /** 构造和析构 **/
-    explicit Logger(AbstractDiagnostor* diagnostor, QObject *parent = nullptr);
+    explicit Logger(AbstractDiagnostor* diagnostor);
 
     /* 写日志 */
     void write(const QString& content, Type t=Type::Info);

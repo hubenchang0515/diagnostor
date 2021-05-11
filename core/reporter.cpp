@@ -2,8 +2,8 @@
 #include <database.h>
 #include <QtDebug>
 
-Reporter::Reporter(AbstractDiagnostor* diagnostor, QObject *parent) :
-    QObject(parent),
+Reporter::Reporter(AbstractDiagnostor* diagnostor) :
+    QObject(dynamic_cast<QObject*>(diagnostor)),
     m_name(diagnostor->name())
 {
 

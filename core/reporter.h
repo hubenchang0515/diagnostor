@@ -28,7 +28,7 @@ public:
     static constexpr const char* TableName = "diagnostor-report";
 
     /** 构造和析构 **/
-    explicit Reporter(AbstractDiagnostor* diagnostor, QObject *parent = nullptr);
+    explicit Reporter(AbstractDiagnostor* diagnostor);
 
     /* 初始化，创建数据库表 */
     static bool init();

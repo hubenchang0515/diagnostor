@@ -3,8 +3,8 @@
 #include <QDebug>
 #include <QDateTime>
 
-Logger::Logger(AbstractDiagnostor* diagnostor, QObject *parent) :
-    QObject(parent),
+Logger::Logger(AbstractDiagnostor* diagnostor) :
+    QObject(dynamic_cast<QObject*>(diagnostor)),
     m_name(diagnostor->name())
 {
 
